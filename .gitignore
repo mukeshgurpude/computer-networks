@@ -1,3 +1,8 @@
 **/*.exe
 **/temp.*
 local/
+# CRC is not implemented yet
+CRC/
+CRC-py/
+**/__pycache__
+assets/

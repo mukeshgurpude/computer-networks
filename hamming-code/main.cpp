@@ -40,10 +40,14 @@ int main() {
     data_bits[i] = data_bits_reversed[n - i - 1];
   }
   // Print the data
-  cout << "Data: ";
+  cout <<endl << "Encoded Data: ";
+  
+  count = 0;
   for (int i = 0; i < n; i++) {
     cout << data_bits[i];
+    if(data_bits[i] == 1) count++;
   }
+  if(count%2 == 0) cout << endl << " (Even) Parity" << endl;
+  else cout << " (Odd) Parity" << endl;
   return 0;
 }
-  
