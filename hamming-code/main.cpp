@@ -10,7 +10,7 @@ int main() {
   cout << "Enter message length: ";
   cin >> m;
 
-  // Use find_r function from temp.h to find r
+  // Use find_r function from functions.h to find r
   r = find_r(m);
   n = pow(2, r);
 

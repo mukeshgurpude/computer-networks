@@ -6,3 +6,5 @@ CRC/
 CRC-py/
 **/__pycache__
 assets/
+calc
+crc
