@@ -7,7 +7,7 @@ using namespace std;
 int main() {
   int m, r, n;
 
-  cout << "Enter message length: ";
+  cout << "Enter message length: "; // 4
   cin >> m;
 
   // Use find_r function from functions.h to find r
@@ -17,7 +17,7 @@ int main() {
   int data_bits_reversed[n];
   int data_bits[n];
 
-  cout<<"Enter the data: ";
+  cout<<"Enter the data: "; // 1 0 0 1
   int count = r-1;
   for (int i = n - 1; i >= 0; i--) {
     if(i == pow(2, count)) {

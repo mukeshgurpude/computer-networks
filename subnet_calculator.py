@@ -6,11 +6,11 @@ if __name__ == '__main__':
 
   if cidr % 8 == 0:
     if cidr == 8:
-      print('Classful: A')
+      print('Classful: C')
     elif cidr == 16:
       print('Classful: B')
     elif cidr == 24:
-      print('Classful: C')
+      print('Classful: A')
   else:
     subnets = 2 ** (cidr%8)
     print('Subnets:', subnets)
@@ -18,9 +18,9 @@ if __name__ == '__main__':
   print('Hosts per subnet:', 2 ** (32 - cidr))
   
   # Calculate subnet mask
-  mask = [255] * ((32-cidr)//8)
+  mask = [255] * (cidr//8)
   mask.append('0')
-  for i in range((32-cidr)%8):
+  for i in range(cidr%8):
     mask[-1] = int(mask[-1]) + (2 ** (8 - i - 1))
   mask += [0] * (4 - len(mask))
   print('Subnet mask:', '.'.join(map(str, mask)))

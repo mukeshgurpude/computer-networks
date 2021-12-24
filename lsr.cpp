@@ -19,12 +19,13 @@ void LSR(int graph[][6], int dist[], bool finalize[]) {
 int main() {
     cout << "LINK STATE ROUTING ALGORITHM \n";
     int graph[6][6] = {
-        {0, 2, 5, 1, -1, -1},
-        {2, 0, 3, 2, -1, -1},
-        {5, 3, 0, 3, 1, 5},
-        {1, 2, 3, 0, 1, -1},
-        {-1, -1, 1, 1, 0, 2},
-        {-1, -1, 5, -1, 2, 0}
+    //   0  1  2  3   4   5
+        {0, 2, 5, 1, -1, -1},  // 0 
+        {2, 0, 3, 2, -1, -1},  // 1
+        {5, 3, 0, 3, 1, 5},  // 2
+        {1, 2, 3, 0, 1, -1},  // 3
+        {-1, -1, 1, 1, 0, 2},  // 4
+        {-1, -1, 5, -1, 2, 0}  // 5
     };
     int dist[6] = {INT_MAX, INT_MAX, INT_MAX, INT_MAX, INT_MAX, INT_MAX};
     bool finalize[6] = {false, false, false, false, false, false};
